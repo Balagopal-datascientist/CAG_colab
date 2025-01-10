@@ -267,14 +267,14 @@ def kvcache_test(args: argparse.Namespace):
         datapath = "./datasets/synthetic_knowledge_items.csv"
         text_list, dataset = get_kis_dataset(datapath)
     if args.dataset == "squad-dev":
-        datapath = "./datasets/squad/dev-v1.1.json"
+        datapath = "/content/CAG/datasets/squad/dev-v1.1.json"
         text_list, dataset = get_squad_dataset(datapath, max_knowledge=args.maxKnowledge, max_paragraph=args.maxParagraph, max_questions=args.maxQuestion)
     if args.dataset == "squad-train":
-        datapath = "./datasets/squad/train-v1.1.json"
+        datapath = "/content/CAG/datasets/squad/train-v1.1.json"
         text_list, dataset = get_squad_dataset(datapath, max_knowledge=args.maxKnowledge, max_paragraph=args.maxParagraph, max_questions=args.maxQuestion)
         answer_instruction = "Answer the question with a super short answer."
     if args.dataset == "hotpotqa-dev":
-        datapath = "./datasets/hotpotqa/hotpot_dev_fullwiki_v1.json"
+        datapath = "/content/CAG/datasets/hotpotqa/hotpot_dev_fullwiki_v1.json"
         text_list, dataset = get_hotpotqa_dataset(datapath, args.maxKnowledge)
         answer_instruction = "Answer the question with a super short answer."
     if args.dataset == "hotpotqa-test":
@@ -286,7 +286,7 @@ def kvcache_test(args: argparse.Namespace):
         text_list, dataset = get_hotpotqa_dataset(datapath, args.maxKnowledge)
         answer_instruction = "Answer the question with a super short answer."
 
-    kvcache_path = "./data_cache/cache_knowledges.pt"
+    kvcache_path = "/content/CAG/data_cache/cache_knowledges.pt"
 
     knowledges = '\n\n\n\n\n\n'.join(text_list)
     knowledge_cache, prepare_time = prepare_kvcache(knowledges, filepath=kvcache_path, answer_instruction=answer_instruction)
