@@ -260,6 +260,7 @@ def get_hotpotqa_dataset(filepath: str, max_knowledge: int = None):
 
 def kvcache_test(args: argparse.Namespace):
     answer_instruction = None
+
     if args.dataset == "kis_sample":
         datapath = "./datasets/rag_sample_qas_from_kis.csv"
         text_list, dataset = get_kis_dataset(datapath)
@@ -267,14 +268,18 @@ def kvcache_test(args: argparse.Namespace):
         datapath = "./datasets/synthetic_knowledge_items.csv"
         text_list, dataset = get_kis_dataset(datapath)
     if args.dataset == "squad-dev":
-        datapath = "./datasets/squad/dev-v1.1.json"
+        datapath = "/content/CAG/datasets/squad/dev-v1.1.json"
         text_list, dataset = get_squad_dataset(datapath, max_knowledge=args.maxKnowledge, max_paragraph=args.maxParagraph, max_questions=args.maxQuestion)
     if args.dataset == "squad-train":
-        datapath = "./datasets/squad/train-v1.1.json"
+        datapath = "/content/CAG/datasets/squad/train-v1.1.json"
         text_list, dataset = get_squad_dataset(datapath, max_knowledge=args.maxKnowledge, max_paragraph=args.maxParagraph, max_questions=args.maxQuestion)
         answer_instruction = "Answer the question with a super short answer."
     if args.dataset == "hotpotqa-dev":
-        datapath = "./datasets/hotpotqa/hotpot_dev_fullwiki_v1.json"
+        datapath = "/content/CAG/datasets/hotpotqa/hotpot_dev_fullwiki_v1.json"
+        text_list, dataset = get_hotpotqa_dataset(datapath, args.maxKnowledge)
+        answer_instruction = "Answer the question with a super short answer."
+    if args.dataset == "custom":
+        datapath = "/content/CAG/datasets/custom/custom.json"
         text_list, dataset = get_hotpotqa_dataset(datapath, args.maxKnowledge)
         answer_instruction = "Answer the question with a super short answer."
     if args.dataset == "hotpotqa-test":
@@ -286,7 +291,7 @@ def kvcache_test(args: argparse.Namespace):
         text_list, dataset = get_hotpotqa_dataset(datapath, args.maxKnowledge)
         answer_instruction = "Answer the question with a super short answer."
 
-    kvcache_path = "./data_cache/cache_knowledges.pt"
+    kvcache_path = "/content/CAG/data_cache/cache_knowledges.pt"
 
     knowledges = '\n\n\n\n\n\n'.join(text_list)
     knowledge_cache, prepare_time = prepare_kvcache(knowledges, filepath=kvcache_path, answer_instruction=answer_instruction)
@@ -438,9 +443,7 @@ if __name__ == "__main__":
     parser.add_argument('--maxParagraph', required=False, default=None, type=int, help='Maximum number of paragraph to use')
     parser.add_argument('--usePrompt', default=False, action="store_true", help='Do not use cache')
     parser.add_argument('--dataset', required=True, help='Dataset to use (kis, kis_sample, squad-dev, squad-train)',
-                        choices=['kis', 'kis_sample',
-                                 'squad-dev', 'squad-train',
-                                 'hotpotqa-dev',  'hotpotqa-train', 'hotpotqa-test'])
+                        )
     parser.add_argument('--randomSeed', required=False, default=None, type=int, help='Random seed to use')
     # 48 Articles, each article average 40~50 paragraph, each average 5~10 questions
 

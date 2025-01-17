@@ -1,0 +1,242 @@
+[
+    {
+        "_id": "1234567890abcdef12345601",
+        "answer": "Type 2 Diabetes",
+        "question": "What is the primary diagnosis for the patient with elevated HbA1c levels?",
+        "supporting_facts": [
+            [
+                "HbA1c Test",
+                0
+            ],
+            [
+                "Type 2 Diabetes",
+                0
+            ]
+        ],
+        "context": [
+            [
+                "HbA1c Test",
+                [
+                    "The HbA1c test measures the average blood sugar levels over the past 2-3 months.",
+                    " A value of 6.5% or higher on two separate tests indicates diabetes."
+                ]
+            ],
+            [
+                "Type 2 Diabetes",
+                [
+                    "Type 2 diabetes is a chronic condition that affects the way the body processes blood sugar (glucose).",
+                    " Risk factors include obesity, inactivity, and genetic predisposition."
+                ]
+            ],
+            [
+                "John Doe",
+                [
+                    "John Doe, a 45-year-old male, reported fatigue and increased thirst during his visit.",
+                    " His HbA1c test result was 7.2%, confirming a diagnosis of type 2 diabetes."
+                ]
+            ]
+        ],
+        "type": "diagnosis",
+        "level": "medium"
+    },
+    {
+        "_id": "1234567890abcdef12345602",
+        "answer": "Hypertension",
+        "question": "What condition is indicated by consistently elevated blood pressure readings in the patient?",
+        "supporting_facts": [
+            [
+                "Blood Pressure",
+                0
+            ],
+            [
+                "Hypertension",
+                0
+            ]
+        ],
+        "context": [
+            [
+                "Blood Pressure",
+                [
+                    "Blood pressure is the force of blood against artery walls.",
+                    " Normal blood pressure is below 120/80 mmHg.",
+                    " Consistently high readings above 130/80 mmHg are classified as hypertension."
+                ]
+            ],
+            [
+                "Hypertension",
+                [
+                    "Hypertension, or high blood pressure, is a condition where the force of the blood against artery walls is too high.",
+                    " It can lead to heart disease, stroke, or kidney problems if not managed."
+                ]
+            ],
+            [
+                "Jane Smith",
+                [
+                    "Jane Smith, a 52-year-old female, recorded blood pressure readings of 145/90 mmHg on three separate visits.",
+                    " She was diagnosed with stage 1 hypertension and prescribed lifestyle changes and medication."
+                ]
+            ]
+        ],
+        "type": "diagnosis",
+        "level": "medium"
+    },
+    {
+        "_id": "1234567890abcdef12345603",
+        "answer": "Anemia",
+        "question": "What is the diagnosis for a patient presenting with low hemoglobin levels?",
+        "supporting_facts": [
+            [
+                "Hemoglobin Test",
+                0
+            ],
+            [
+                "Anemia",
+                0
+            ]
+        ],
+        "context": [
+            [
+                "Hemoglobin Test",
+                [
+                    "A hemoglobin test measures the level of hemoglobin in the blood.",
+                    " Normal levels are 13.8-17.2 g/dL for men and 12.1-15.1 g/dL for women.",
+                    " Low levels indicate anemia."
+                ]
+            ],
+            [
+                "Anemia",
+                [
+                    "Anemia is a condition characterized by a lack of healthy red blood cells to carry oxygen to tissues.",
+                    " Symptoms include fatigue, weakness, and pale skin."
+                ]
+            ],
+            [
+                "Alice Brown",
+                [
+                    "Alice Brown, a 34-year-old female, presented with fatigue and pale skin.",
+                    " Her hemoglobin level was 10.5 g/dL, leading to a diagnosis of anemia."
+                ]
+            ]
+        ],
+        "type": "diagnosis",
+        "level": "medium"
+    },
+    {
+        "_id": "1234567890abcdef12345604",
+        "answer": "Asthma",
+        "question": "What condition is indicated by recurrent episodes of wheezing and shortness of breath?",
+        "supporting_facts": [
+            [
+                "Asthma Symptoms",
+                0
+            ],
+            [
+                "Asthma",
+                0
+            ]
+        ],
+        "context": [
+            [
+                "Asthma Symptoms",
+                [
+                    "Asthma symptoms include wheezing, shortness of breath, chest tightness, and coughing, especially at night or early morning."
+                ]
+            ],
+            [
+                "Asthma",
+                [
+                    "Asthma is a chronic condition where the airways become inflamed and narrow, making breathing difficult.",
+                    " Triggers include allergens, exercise, and cold air."
+                ]
+            ],
+            [
+                "Mark Lee",
+                [
+                    "Mark Lee, a 29-year-old male, reported recurrent wheezing and shortness of breath during exercise.",
+                    " He was diagnosed with asthma and prescribed an inhaler."
+                ]
+            ]
+        ],
+        "type": "diagnosis",
+        "level": "easy"
+    },
+    {
+        "_id": "1234567890abcdef12345605",
+        "answer": "Hypothyroidism",
+        "question": "What is the condition caused by an underactive thyroid gland?",
+        "supporting_facts": [
+            [
+                "Thyroid Function Test",
+                0
+            ],
+            [
+                "Hypothyroidism",
+                0
+            ]
+        ],
+        "context": [
+            [
+                "Thyroid Function Test",
+                [
+                    "A thyroid function test measures levels of TSH and T4 in the blood.",
+                    " High TSH and low T4 levels indicate hypothyroidism."
+                ]
+            ],
+            [
+                "Hypothyroidism",
+                [
+                    "Hypothyroidism is a condition where the thyroid gland does not produce enough hormones.",
+                    " Symptoms include fatigue, weight gain, and sensitivity to cold."
+                ]
+            ],
+            [
+                "Emma Wilson",
+                [
+                    "Emma Wilson, a 40-year-old female, reported fatigue and weight gain.",
+                    " Her thyroid function test showed high TSH and low T4 levels, confirming hypothyroidism."
+                ]
+            ]
+        ],
+        "type": "diagnosis",
+        "level": "medium"
+    },
+    {
+        "_id": "1234567890abcdef12345606",
+        "answer": "Migraine",
+        "question": "What condition is associated with recurring headaches, sensitivity to light, and nausea?",
+        "supporting_facts": [
+            [
+                "Migraine Symptoms",
+                0
+            ],
+            [
+                "Migraine",
+                0
+            ]
+        ],
+        "context": [
+            [
+                "Migraine Symptoms",
+                [
+                    "Migraine symptoms include severe headaches, often on one side of the head, sensitivity to light and sound, and nausea."
+                ]
+            ],
+            [
+                "Migraine",
+                [
+                    "Migraine is a neurological condition that can cause multiple symptoms.",
+                    " It is often triggered by stress, certain foods, or hormonal changes."
+                ]
+            ],
+            [
+                "Liam Johnson",
+                [
+                    "Liam Johnson, a 36-year-old male, reported severe headaches with sensitivity to light and nausea.",
+                    " He was diagnosed with migraines and advised to avoid known triggers."
+                ]
+            ]
+        ],
+        "type": "diagnosis",
+        "level": "easy"
+    }
+]
