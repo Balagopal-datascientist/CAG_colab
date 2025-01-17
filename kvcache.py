@@ -443,9 +443,7 @@ if __name__ == "__main__":
     parser.add_argument('--maxParagraph', required=False, default=None, type=int, help='Maximum number of paragraph to use')
     parser.add_argument('--usePrompt', default=False, action="store_true", help='Do not use cache')
     parser.add_argument('--dataset', required=True, help='Dataset to use (kis, kis_sample, squad-dev, squad-train)',
-                        choices=['kis', 'kis_sample',
-                                 'squad-dev', 'squad-train',
-                                 'hotpotqa-dev',  'hotpotqa-train', 'hotpotqa-test'])
+                        )
     parser.add_argument('--randomSeed', required=False, default=None, type=int, help='Random seed to use')
     # 48 Articles, each article average 40~50 paragraph, each average 5~10 questions
 
