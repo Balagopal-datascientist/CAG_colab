@@ -260,6 +260,7 @@ def get_hotpotqa_dataset(filepath: str, max_knowledge: int = None):
 
 def kvcache_test(args: argparse.Namespace):
     answer_instruction = None
+
     if args.dataset == "kis_sample":
         datapath = "./datasets/rag_sample_qas_from_kis.csv"
         text_list, dataset = get_kis_dataset(datapath)
@@ -275,6 +276,10 @@ def kvcache_test(args: argparse.Namespace):
         answer_instruction = "Answer the question with a super short answer."
     if args.dataset == "hotpotqa-dev":
         datapath = "/content/CAG/datasets/hotpotqa/hotpot_dev_fullwiki_v1.json"
+        text_list, dataset = get_hotpotqa_dataset(datapath, args.maxKnowledge)
+        answer_instruction = "Answer the question with a super short answer."
+    if args.dataset == "custom":
+        datapath = "/content/CAG/datasets/custom/custom.json"
         text_list, dataset = get_hotpotqa_dataset(datapath, args.maxKnowledge)
         answer_instruction = "Answer the question with a super short answer."
     if args.dataset == "hotpotqa-test":
